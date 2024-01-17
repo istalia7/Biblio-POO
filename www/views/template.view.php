@@ -31,6 +31,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="a-propos">A Propos</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="connexion">Connexion</a>
+                    </li>
             </div>
         </div>
     </nav>

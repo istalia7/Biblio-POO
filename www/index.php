@@ -13,6 +13,9 @@ if (empty($_GET['page'])) {
         case 'a-propos':
             require "views/a-propos.view.php";
             break;
+        case 'connexion':
+            require "views/connexion.view.php";
+            break;
         default:
             require "views/error.view.php"; // page d'erreur
     }
