@@ -6,16 +6,14 @@ class Livre
     private string $titre;
     private string $image;
     private int $nbrPages;
-    private string $imageAlt;
     // public static array $livres; // tableau de livres
 
-    function __construct(int $idLivre, string $titre, string $image, int $nbrPages, string $imageAlt)
+    function __construct(int $idLivre, string $titre, string $image, int $nbrPages)
     {
         $this->idLivre = $idLivre;
         $this->titre = $titre;
         $this->image = $image;
         $this->nbrPages = $nbrPages;
-        $this->imageAlt = $imageAlt;
         // self::$livres[] = $this;
     }
 
@@ -113,15 +111,5 @@ class Livre
         $this->image = $image;
 
         return $this;
-    }
-
-    /**
-     * Get the value of imageAlt
-     *
-     * @return string
-     */
-    public function getImageAlt(): string
-    {
-        return $this->imageAlt;
     }
 }

@@ -1,10 +1,19 @@
-<!-- buffer démarré -->
-<?php ob_start() ?>
-
-<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, quam! Harum, sequi voluptate voluptas minus ducimus earum illo error molestiae soluta, unde, a tenetur nisi optio totam accusamus consequuntur provident.</p>
-
 <?php
-$titre = "Bibliothèque d'Alexis";
-// buffer restitué
-$content = ob_get_clean();
-require_once "template.php";
+
+if (empty($_GET['page'])) {
+    require "views/accueil.view.php"; // page par défaut
+} else {
+    switch ($_GET['page']) {
+        case 'accueil':
+            require "views/accueil.view.php"; // Appel de la vue Accueil
+            break;
+        case 'livres':
+            require "views/livres.view.php"; // Appel de la vue Livres
+            break;
+        case 'a-propos':
+            require "views/a-propos.view.php";
+            break;
+        default:
+            require "views/error.view.php"; // page d'erreur
+    }
+}
